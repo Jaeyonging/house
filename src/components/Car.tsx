@@ -27,10 +27,10 @@ export const Car = () => {
     useEffect(() => {
         if (!tl.current) {
             tl.current = gsap.timeline();
-            console.log(tl.current)
             tl.current.to(
                 gltf.scene.position,
                 {
+                    duration: 1,
                     z: 3,
                     x: 8,
                 },
@@ -45,7 +45,7 @@ export const Car = () => {
                     z: 0,
                     x: -10,
 
-                }, 0.8
+                }, 2
             )
 
 
@@ -54,7 +54,7 @@ export const Car = () => {
                 {
                     duration: 1,
                     y: 0
-                }, 0.8
+                }, 2
             )
         }
 
