@@ -5,16 +5,16 @@ import { useFrame } from '@react-three/fiber';
 interface Props {
     opacity: number
     children: React.ReactNode
-    className: string
 }
 
-const Section = ({ opacity, children, className }: Props) => {
+const Section = ({ opacity, children }: Props) => {
     return (
-        <div className={className} style={{ opacity: opacity }}>
-            <div>
+        <div className="slide" style={{ opacity: opacity }}>
+            <div className='card-section'>
                 {children}
             </div>
         </div>
+
     );
 };
 
@@ -32,13 +32,13 @@ export const CardView = () => {
     });
     return (
         <Scroll html>
-            <Section className="first-slide" opacity={opacityFirstSection}>
+            <Section opacity={opacityFirstSection}>
                 house
             </Section>
-            <Section className="second-slide" opacity={opacitySecondSection}>
+            <Section opacity={opacitySecondSection}>
                 cat
             </Section>
-            <Section className="third-slide" opacity={opacityLastSection}>
+            <Section opacity={opacityLastSection}>
                 car
             </Section>
         </Scroll>
