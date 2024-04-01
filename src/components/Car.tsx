@@ -1,6 +1,6 @@
 import { useGLTF, useScroll } from '@react-three/drei';
 import { useFrame, useLoader } from '@react-three/fiber';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from "gsap";
 import { GLTFLoader } from 'three/examples/jsm/Addons.js';
 
